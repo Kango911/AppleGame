@@ -44,7 +44,7 @@ def main():
             score += 1
             if len(apples) == 0:
                 print("Вы победили!")
-                time.sleep(5)  # Задержка в одну секунду
+                time.sleep(5)  # Задержка в 5 секунду
                 break
 
 if __name__ == "__main__":
