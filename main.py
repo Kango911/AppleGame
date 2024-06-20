@@ -1,22 +1,22 @@
 import os
-import random
+import random#Kango911
 import time
 
 N = 10  # Размер игрового поля
-M = 10
+M = 10#Kango911
 
 player_symbol = u"\u263A"  # Смайлик для игрока
 apple_symbol = u"\u25A0"  # Символ для яблока
 
 player_pos = [N//2, M//2]  # Начальное положение игрока
 apples = [[random.randint(0, N-1), random.randint(0, M-1)] for _ in range(5)]  # Произвольное размещение яблок
-
+#Kango911
 def print_board():
     os.system('cls' if os.name == 'nt' else 'clear')  # Очистка экрана
     for i in range(N):
         for j in range(M):
             if [i, j] == player_pos:
-                print(player_symbol, end=' ')
+                print(player_symbol, end=' ')#Kango911
             elif [i, j] in apples:
                 print(apple_symbol, end=' ')
             else:
@@ -27,14 +27,14 @@ def move_player():
     key = input("Введите WASD для перемещения: ").lower()
     if key == 'w':
         player_pos[0] = max(0, player_pos[0] - 1)
-    elif key == 's':
+    elif key == 's':#Kango911
         player_pos[0] = min(N-1, player_pos[0] + 1)
     elif key == 'a':
         player_pos[1] = max(0, player_pos[1] - 1)
     elif key == 'd':
         player_pos[1] = min(M-1, player_pos[1] + 1)
 
-def main():
+def main():#Kango911
     score = 0
     while True:
         print_board()
@@ -44,7 +44,7 @@ def main():
             score += 1
             if len(apples) == 0:
                 print("Вы победили!")
-                time.sleep(5)  # Задержка в 5 секунду
+                time.sleep(5)  # Задержка в 5 секунду#Kango911
                 break
 
 if __name__ == "__main__":
